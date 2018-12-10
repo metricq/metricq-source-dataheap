@@ -100,7 +100,7 @@ class Bridge(metricq.Source):
         self.dataheap_host = dataheapHost
         self.dataheap_port = dataheapPort
         self.metric_mapping = metrics
-        self.declare_metrics(self, list(metrics.values()))
+        self.declare_metrics(list(metrics.values()))
 
     async def task(self):
         self.dataheap_connect()
